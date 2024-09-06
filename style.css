@@ -23,10 +23,10 @@ section{
 content: '';
 position: absolute;
 top: 50%;
-right: 150px;
+right: 120px;
 transform: translateY(-50%);
-width: 500px;
-height: 500px;
+width: 450px;
+height: 450px;
 background: #1de5ff;
 border-radius: 100%;
 box-shadow: 0 0 20px #1de5ff,
@@ -76,7 +76,7 @@ header .logo span{
 
 header .toggle{
     position: relative;
-    width: 30px;
+    width: 40px;
     height: 30px;
     background: url(images/menu.png);
     background-repeat: no-repeat;
@@ -95,10 +95,32 @@ header .toggle.active{
 
 .zah{
     position: absolute;
-    bottom: 360px;
-    right: 370px;
-    width: 500px;
+    bottom: 120px;
+    right: 195px;
+    width: 350px;
+    opacity:0%;
 }
+
+.zlogo{
+  position: absolute;
+  bottom: 160px;
+  right: 125px;
+  width: 350px;
+  height: auto;
+  opacity: 40%
+
+}
+
+
+.zlogo1{
+  position: absolute;
+  bottom: 160px;
+  right: 125px;
+  width: 350px;
+  height: auto;
+  opacity: 100%
+}
+
 
 .content{
 position: relative;    
@@ -417,14 +439,17 @@ section.active .menu {
   }
 
   /* services*/
-
-
+  
   .services {
     margin-top:70px;
     margin-bottom:20px;
-    background: #1d9dff;
+    background: linear-gradient(135deg, #21283a 0%, #1d9dff 50%, #21283a 100%);
   }
-
+  .features.text-center.section-padding {
+    background-color: #5c87ae !important;
+  }
+  
+  
   .services h12  {
     display:block;
     font-size:25px;
@@ -442,7 +467,8 @@ section.active .menu {
     -webkit-text-stroke-width: 1px;
 
   }
-  
+
+
   
   .services .icon {
     position:relative;
