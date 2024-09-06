@@ -23,12 +23,12 @@ section{
 content: '';
 position: absolute;
 top: 50%;
-right: 350px;
+right: 150px;
 transform: translateY(-50%);
 width: 500px;
 height: 500px;
 background: #1de5ff;
-border-radius: 50%;
+border-radius: 100%;
 box-shadow: 0 0 20px #1de5ff,
 0 0 50px #1d9dff,
 0 0 150px #1d9dff;
@@ -89,7 +89,7 @@ header .toggle.active{
     
     background: url(images/close.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-size: 40px;
 }
 
@@ -337,12 +337,17 @@ section.active .menu {
   .btn-container {
     gap: 1rem;
   }
-#about {
+
+  #about {
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    height: 70vh;  }
+    height: 70vh;
+    background: linear-gradient(to top, #5c87ae, #21283a); /* Gradient from white to #21283a */
+
+
+  }
   
   .about-containers {
     gap: 2rem;
@@ -353,20 +358,36 @@ section.active .menu {
   .about-details-container {
     justify-content: center;
     flex-direction: column;
+    display: flex;
+    padding: 20px;
+    border-radius: 2rem;
+    background: transparent; /* Remove background color to allow the gradient */
   }
+
+
+ 
   
   .about-containers,
   .about-details-container {
     display: flex;
   }
   
+  .about-pic {
+    height: 400px; /* Set your desired height */
+    width: 400px;  /* Set your desired width */
+    object-fit: cover; /* Ensures the image fits nicely if the aspect ratio is different */
+  }
+  
+  
   .section__pic-container {
     display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-    right: 900px
-  }
+    height: auto;
+    max-width: 50%;
+    width: 50% ;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+   }
 
   .about-pic {
     border-radius: 2rem;
@@ -382,11 +403,11 @@ section.active .menu {
   
   .details-container {
     padding: 1.5rem;
-    flex: 1;
-    background: white;
-    border-radius: 2rem;
+    flex: 10;
+    background: #21283a;
+    border-radius: 4rem;
     border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border-color: rgb(0, 0, 0);
     text-align: center;
   }
   
@@ -394,50 +415,107 @@ section.active .menu {
     gap: 4rem;
     height: 80%;
   }
+
+  /* services*/
+
+
+  .services {
+    margin-top:70px;
+    margin-bottom:20px;
+    background: #1d9dff;
+  }
+
+  .services h12  {
+    display:block;
+    font-size:25px;
+    margin-top:20px;
+    color: #111;
+    -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  }
+
+  .services p12  {
+    display:block;
+    font-size:15px;
+    margin-top:20px;
+    color: #111;
+    -webkit-text-stroke-width: 1px;
+
+  }
   
   
-  /* EXPERIENCE SECTION */
-  
-  #experience {
+  .services .icon {
+    position:relative;
+    width:175px;
+    height:175px;
+    margin:0 auto;
+    text-align:center;
+    line-height:180px;
+    font-size:56px;
+    color:#fff;
+    border-radius:50%;
+    box-shadow:0 0 0 0 rgba(0,0,0,0.0);
+    margin-bottom:40px;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+    border: 1px solid #1de5ff;
+    color:#1de5ff;
+  }
+  .services .item:hover .icon {
+    background: #1de5ff;
+    border: 1px solid #1de5ff;
+  }
+  .services .item [class*=fa] {
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+  }
+  .services .item:hover [class*=fa] {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+    color:#fff;
+  }
+  .features-wrapper {
+    margin:70px 0 0;
+  }
+  i.respons {
+    position:relative;
+    width:35px;
+    height:35px;
+    margin:0 auto;
+    line-height:35px;
+    text-align:center;
+    font-size:15px;
+    color:#fff;
+    border-radius:50%;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+    border:1px solid #CCCCCC;
+    color: #CCCCCC;
+  }
+  /* ==========================================================================iPhone Section========================================================================== */
+  .iphone {
+    width:50%;
+    background:#f3f5f8;
+    float:left;
+    height:100%;
+    box-shadow:inset -15px -11px 40px -6px rgba(0,0,0,0.1);
+    -moz-box-shadow:inset -15px -11px 40px -6px rgba(0,0,0,0.1);
+    -webkit-box-shadow:inset -15px -11px 40px -6px rgba(0,0,0,0.1);
+    z-index:1;
+  }
+  .fluid-white {
+    width:50%;
+    background:#fff;
+    float:right;
+    height:100%;
+    z-index:2;
+  }
+  .responsive-services {
     position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
   }
-  
-  .experience-sub-title {
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-  }
-  
-  .experience-details-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .article-container {
-    display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
-  }
-  
-  article {
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
-  }
-  
-  article .icon {
-    cursor: default;
-  }
+ 
   
   /* PROJECTS SECTION */
   
@@ -447,6 +525,8 @@ section.active .menu {
     justify-content: center;
     flex-direction: column;
     height: 70vh;
+    background: linear-gradient(to bottom, #5c87ae, #21283a); /* Gradient from white to #21283a */
+
   }
   
   .color-container {
@@ -467,9 +547,158 @@ section.active .menu {
   
   .project-btn {
     color: black;
-    border-color: rgb(163, 163, 163);
+    border-color: rgb(0, 0, 0);
   }
   
+  /* Projects */
+
+  .swag {
+    padding: auto; /* Adjust based on your layout */
+    background: linear-gradient(to bottom, #5c87ae, #21283a); /* Gradient from white to #21283a */
+
+}
+
+  .swag h10 {
+    text-transform:uppercase;
+    letter-spacing:10px;
+  }
+  .swag h10 span {
+    display:block;
+    font-size:45px;
+    margin-top:20px;
+    color: #111;
+    -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+
+  }
+  .down-arrow-btn {
+    width:auto;
+    height:40px;
+    background:rgba(0,0,0,0.6);
+    display:inline-block;
+    margin:15px 5px 15px 5px;
+    color:#fff;
+    font-size:16px;
+    line-height:40px;
+    padding:0px 10px;
+    text-align:center;
+  }
+  .down-arrow-btn:hover,.down-arrow-btn:focus {
+    color:#fff;
+    background:rgba(0,0,0,1);
+  }
+  .portfolio img {
+    height: 300px; /* Adjust to match the rest of your site's style */
+    width: 100%; 
+}
+
+img.grayscale {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 0.6s ease;
+}
+
+
+img.grayscale:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+
+  
+  img.grayscale:hover {
+    filter:none;
+    -webkit-filter:grayscale(0%);
+  }
+  .row-offset-0 {
+    margin-left:0;
+    margin-right:0;
+  }
+  .row-offset-0>* {
+    padding-left:0;
+    padding-right:0;
+  }
+  .effects {
+    padding-left:15px;
+  }
+  .effects .img {
+    position:relative;
+    position:relative;
+    z-index:1;
+    overflow:hidden;
+  }
+  .effects .img:nth-child(n) {
+    margin-right:5px;
+  }
+  .effects .img:first-child {
+    margin-left:-15px;
+  }
+  .effects .img:last-child {
+    margin-right:0;
+  }
+  .effects .img img {
+    display:block;
+    margin:0;
+    padding:0;
+    height:auto;
+  }
+  .overlay {
+    display:block;
+    position:absolute;
+    z-index:20;
+    filter:none!important;
+    -webkit-filter:grayscale(0%);
+    overflow:hidden;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+    -moz-transition:all 0.5s;
+    -o-transition:all 0.5s;
+  }
+  .overlay-effect .img i {
+    font-size:30px;
+  }
+  .overlay-effect .overlay {
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    opacity:0;
+  }
+  .overlay-effect .overlay a.expand {
+    left:0;
+    right:0;
+    bottom:47%;
+    margin:0 auto -30px auto;
+  }
+  .overlay-effect .img.hover .overlay {
+    height:100%;
+    opacity:1;
+  }
+  .img img {
+    width:-webkit-calc(100%+40px) !important;
+    width:calc(100%+40px) !important;
+    -webkit-transition:opacity 0.35s,-webkit-transform 0.35s;
+    transition:opacity 0.35s,transform 0.35s;
+    -moz-transition:opacity 0.35s,-moz-transform 0.35s;
+    -o-transition:opacity 0.35s,-o-transform 0.35s;
+    -webkit-transform:translate3d(-40px,0,0);
+    transform:translate3d(-40px,0,0);
+    -ms-transform:translate3d(-40px,0,0);
+  }
+  .img:hover img {
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+    -ms-transform:translate3d(-40px,0,0);
+  }
+  .hype {
+    position:absolute;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    top: 50px;
+  }
+
   /* CONTACT */
   
   #contact {
@@ -520,3 +749,6 @@ section.active .menu {
   footer p {
     text-align: center;
   }
+
+
+  
